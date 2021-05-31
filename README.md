@@ -1,3 +1,137 @@
+* [ ] Open the assignment in Canvas and following along with the attached document [here.](https://www.notion.so/lambdaschool/Submitting-an-assignment-via-Code-Grade-A-Step-by-Step-Walkthrough-07bd65f5f8364e709ecb5064735ce374).
+* [ ] Follow instructions to set up Codegrade's Webhook and Deploy Key, making sure your deployment is set to your `<firstName-lastName>`.
+* [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`
+* [ ] Check to see that Codegrade has accepted your git submission.
+
+#### index.js
+  Connect your application to reducer through redux with the thunk and logger middleware packages attached.
+
+#### App.js
+  Connect this component to redux **passing in your fetchSmurfs action only.** 
+  
+  * [ ] Connect the fetchSmurfs actions to the App component.
+  * [ ] Call the fetchSmurfs action when the component first loads.
+
+#### components/SmurfList.js
+  Connect this component to redux, **passing in your smurf array and loading status state values.** 
+  
+  * [ ] Connect the smurfs and loading state values to the SmurfList component.
+  * [ ] Replace the single Smurf component instance with a map return a Smurf component for each entry in the smurfs list.
+  * [ ] Replace the static isLoading variable with the state loading variable.
+
+#### components/Smurf.js
+  You do not need to modify this component.
+
+#### components/AddForm.js
+  Connect this component to redux **passing in your error message state value, setError action and addSmurf action.** Complete the form handling code.
+
+  * [ ] Connect the errorMessage, setError and addSmurf actions to the AddForm component.
+  * [ ] Replace all instances of the errorMessage static variable with your error message state value. 
+  * [ ] Within the handleSubmit function, replace the static assignment to errorMessage with a call to the setError action. Test that an error is displayed when this validation code fails.
+  * [ ] Within the handleSubmit function, call your addSmurf action with the smurf name, position, nickname and summury passed as arguments. Test that a smurf is correctly added to when the form is submitted.
+
+  **Notes:**
+
+  * You are welcome to create additional files but **do not move or rename existing files** or folders.
+  * Do not alter your `package.json` file except to install extra libraries.
+  * In your solution, it is essential that you follow best practices and produce clean and professional results.
+  * Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work.
+  * It is better to submit a challenge that meets MVP than one that attempts too much and does not.
+
+### Task 4: Stretch Goals
+
+ **IMPORTANT:** Only work on stretch goals after completing your MVP!
+
+ When completing these goals, make sure to use a **new branch** to ensure your MVP code is not overwritten. You can branch off `main` by executing `git checkout -b stretch`. When you are fully sure your stretch code is ready for feedback, merge your stretch code with main using `git checkout main` and `git merge stretch.`
+
+  After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on the following optional goals:
+
+* [ ] Build a smurf profile page with using react-router and dynamic url params  
+* [ ] Using React Testing Library, test one or more of your components (not any component that fetches data though)
+
+### Reference Materials
+
+#### Resource: API documentation 
+
+##### GET '/smurfs'
+
+- [ ] Retrieve an array all the Smurfs in the Smurf DB by writing a `GET` to the endpoint `http://localhost:3333/smurfs`.
+- [ ] Double check that your response from the server is an array of smurfs.
+
+```js
+[
+  {
+    id:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+    name:'Poppa Smurf',
+    position:'Village Leader',
+    nickname: 'Pops',
+    description: 'Papa is the practical village leader and the father figure of 100 or so young Smurfs. He is easily identified by his red Smurf hat, pants, and a shortly-trimmed white beard and moustache.'
+  }
+];
+```
+
+
+- [ ] Double check to make sure that a smurf is created correctly once your functionality is built out. Initially Poppa and Smurfette will be in the array.
+
+**HINT** if you are going to be working on Stretch Problem, you'll need to use that unique `id`.
+
+Example of object created in Smurf DB:
+
+```js
+[
+  {
+    name:'Poppa Smurf',
+    position:'Village Leader',
+    nickname: 'Pops',
+    description: 'Papa is the practical village leader and the father figure of 100 or so young Smurfs. He is easily identified by his red Smurf hat, pants, and a shortly-trimmed white beard and moustache.'
+  },
+  {
+    id:"JzdWIiOiIxMjM0NTY3ODkwIiwibmFtZ",
+    name:'Smurfette',
+    position:'Beautician',
+    nickname: 'Smurfette',
+    description: 'Smurfette\'s role in the village is that of any other smurf; chores, and helping out where she can, but for her specifically, she is often seen to be very active in organizing events.'
+  }
+];
+```
+
+## Submission format
+
+* [ ] Submit via Codegrade by commiting and pushing any new changes.
+* [ ] Submit a pull-request to merge <firstName-lastName> branch into main. **Please don't merge your own pull request and make sure you are on your own repo**
+* [ ] Check codegrade for automated feedback.
+* [ ] Check codegrade on Monday following the Sprint Challenge for reviewer feedback.
+* [ ] Any changes pushed to your <firstName-lastName> branch will resubmited to codegrade if pushed before the sprint challenge deadline. Changes after the deadline will not be reviewed.
+
+## Interview Questions
+
+Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers to the questions within `interview_answers.md` file. These will not be counted as a part of your sprint score but will be helpful for preparing you for your endorsement interview, and enhancing overall understanding.
+
+1. What problem does the context API help solve?
+2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+3. What does `redux-thunk` allow us to do? How does it change our `action-creators`?
+4. What is your favorite state management system you've learned and this sprint? Please explain why!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Advanced State Management Sprint Challenge
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
